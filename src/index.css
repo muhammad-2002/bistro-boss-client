@@ -8,3 +8,10 @@ body {
   font-family: "Inter", sans-serif;
   background-color: #0f172a;
 }
+.MuiTab-root {
+  color: #bb8506 !important;
+  font-family: "Cinzel";
+}
+.MuiTabs-indicator {
+  background-color: #bb8506 !important ;
+}
