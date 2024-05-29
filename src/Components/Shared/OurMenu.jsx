@@ -13,7 +13,7 @@ const OurMenu = () => {
   //       setMenu(popularMenu);
   //     });
   // }, []);
-  const [data] = useMenu("menu.json");
+  const [data] = useMenu("/menu");
   const popular = data.filter((item) => item.category === "popular");
   return (
     <div className="mt-20">

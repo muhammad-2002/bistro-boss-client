@@ -10,7 +10,8 @@ import bannerSalad from "../assets/menu/salad-bg.jpg";
 import bannerSoup from "../assets/menu/soup-bg.jpg";
 
 const OurMenu = () => {
-  const [data] = useMenu("menu.json");
+  const [data] = useMenu("/menu");
+  console.log(data);
   const offered = data.filter((item) => item.category === "offered");
   const dessert = data.filter((item) => item.category === "dessert");
   const soup = data.filter((item) => item.category === "soup");

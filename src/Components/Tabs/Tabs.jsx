@@ -10,7 +10,7 @@ function SimpleTabs() {
   const index = categories.indexOf(category);
 
   const [value, setValue] = useState(index);
-  const [data] = useMenu("menu.json");
+  const [data] = useMenu("http://localhost:5000/menu");
   const offered = data.filter((item) => item.category === "offered");
   const dessert = data.filter((item) => item.category === "dessert");
   const soup = data.filter((item) => item.category === "soup");

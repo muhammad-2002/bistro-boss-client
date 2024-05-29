@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import HeadingComp from "../Shared/HeadingComp";
 // Import Swiper styles
@@ -9,14 +9,10 @@ import "swiper/css/navigation";
 import "@smastrom/react-rating/style.css";
 // import required modules
 import { Navigation } from "swiper/modules";
+import useMenu from "../useMenu/useMenu";
 
 const CustomerReview = () => {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    fetch("review.json")
-      .then((res) => res.json())
-      .then((data) => setData(data));
-  }, []);
+  const [data] = useMenu("/review");
 
   return (
     <div className="mt-10">
